@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Bezpieczeństwa - Dzień Bezpiecznego Internetu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="strona_DBI_.png" alt="Logo DBI" class="logo">
+            <h1>Dzień Bezpiecznego Internetu</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="about.html">O Dniu</a></li>
+                <li><a href="tips.html">Porady</a></li>
+                <li><a href="resources.html">Zasoby</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>🧠 Quiz Bezpieczeństwa w Internecie</h2>
+            <p class="intro">Sprawdź swoją wiedzę o bezpieczeństwie w sieci! Odpowiedz na pytania i zobacz, jak dobrze znasz zasady bezpiecznego korzystania z internetu.</p>
+        </section>
+
+        <section class="quiz-section">
+            <div id="quiz-container">
+                <div id="start-screen">
+                    <h3>🎯 Rozpocznij Quiz</h3>
+                    <p>Quiz zawiera 10 pytań dotyczących bezpieczeństwa w internecie.</p>
+                    <p>Każda poprawna odpowiedź daje 1 punkt.</p>
+                    <button id="start-btn" class="btn">Rozpocznij Quiz</button>
+                </div>
+
+                <div id="question-container" style="display: none;">
+                    <div id="progress-container">
+                        Pytanie <span id="current-question">1</span> z <span id="total-questions">10</span>
+                    </div>
+                    <div id="question-text"></div>
+                    <div id="answers-container"></div>
+                    <div id="feedback-container" style="display: none;">
+                        <p id="feedback-text"></p>
+                    </div>
+                    <button id="next-btn" class="btn" style="display: none;">Następne pytanie</button>
+                </div>
+
+                <div id="result-container" style="display: none;">
+                    <h3>🏆 Wynik Końcowy</h3>
+                    <p id="score-text"></p>
+                    <p id="message-text"></p>
+                    <button id="restart-btn" class="btn">Zagraj ponownie</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>📚 Przydatne informacje</h2>
+            <div class="info-box">
+                <h3>💡 Dlaczego warto znać zasady bezpieczeństwa?</h3>
+                <p>Świadomość zagrożeń w internecie to pierwszy krok do ochrony siebie i swoich bliskich. Regularne aktualizowanie wiedzy pomaga unikać oszustw, kradzieży tożsamości i innych cyberzagrożeń.</p>
+            </div>
+            <div class="info-box">
+                <h3>🔗 Gdzie szukać pomocy?</h3>
+                <p>Jeśli napotkasz problem w internecie, możesz skorzystać z:</p>
+                <ul class="help-list">
+                    <li>Telefonu zaufania dla dzieci i rodziców: 116 111</li>
+                    <li>Centrum Zgłoszeń Nielegalnych Treści: dzine.pl</li>
+                    <li>Sieci Hotline: hotline.org.pl</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dzień Bezpiecznego Internetu</p>
+    </footer>
+
+    <script src="navigation.js"></script>
+    <script src="theme.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
