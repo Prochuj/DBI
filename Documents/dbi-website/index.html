@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Glowna - dbi.pl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="left-column">
+                    <h1>Dzien Bezpiecznego Internetu</h1>
+                    <nav>
+                        <a href="index.html" class="active">Strona Glowna</a>
+                        <a href="about.html">O Dniu</a>
+                        <a href="tips.html">Porady</a>
+                        <a href="resources.html">Zasoby</a>
+                    </nav>
+                </td>
+                <td class="right-column">
+                    <section class="hero">
+                        <h2>Witaj na stronie Dnia Bezpiecznego Internetu!</h2>
+                        <p>Dbaj o swoje bezpieczenstwo w sieci kazdego dnia!</p>
+                        <a href="tips.html" class="btn">Poznaj porady</a>
+                    </section>
+
+                    <section class="info-cards">
+                        <div class="card">
+                            <h3>Hasla</h3>
+                            <p>Stosuj silne i unikalne hasla do kazdego konta.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Phishing</h3>
+                            <p>Uwazaj na podejrzane e-maile i linki.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Prywatnosc</h3>
+                            <p>Chron swoje dane osobowe w internecie.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Antywirus</h3>
+                            <p>Uzywaj aktualnego oprogramowania antywirusowego.</p>
+                        </div>
+                    </section>
+
+                    <section class="counter-section">
+                        <h3>Dni do nastepnego Dnia Bezpiecznego Internetu:</h3>
+                        <div id="countdown" class="countdown"></div>
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Dzien Bezpiecznego Internetu</p>
+        <p>Wykonal: Pawel Proch</p>
+    </footer>
+
+    <script>
+        // Prosta nawigacja - podswietlenie aktywnej strony
+        var linki = document.querySelectorAll('nav a');
+        for (var i = 0; i < linki.length; i++) {
+            if (linki[i].href.indexOf('index.html') > -1) {
+                linki[i].classList.add('active');
+            }
+        }
+        
+        // Proste przyciski do zmiany wygladu strony
+        var styleMenu = document.createElement('div');
+        styleMenu.innerHTML = '<p style="margin: 10px 0; font-size: 14px;">Zmiana wygladu:</p>' +
+            '<button onclick="document.body.style.backgroundColor=\\"#f0f0f0\\" style="margin: 2px; padding: 5px 10px;">Jasne</button>' +
+            '<button onclick="document.body.style.backgroundColor=\\"#2d2d2d\\" style="margin: 2px; padding: 5px 10px;">Ciemne</button>' +
+            '<button onclick="document.body.style.fontSize=\\"16px\\" style="margin: 2px; padding: 5px 10px;">Normalna czcionka</button>' +
+            '<button onclick="document.body.style.fontSize=\\"20px\\" style="margin: 2px; padding: 5px 10px;">Duza czcionka</button>';
+        styleMenu.style.cssText = 'background: white; padding: 15px; border-radius: 8px; margin: 20px 0;';
+        document.querySelector('.counter-section').insertBefore(styleMenu, document.querySelector('.countdown'));
+        
+        // Prosty licznik dni do DBI
+        var countdown = document.getElementById('countdown');
+        if (countdown) {
+            var today = new Date();
+            var dbi = new Date(today.getFullYear(), 1, 9); // 9 lutego
+            if (today > dbi) {
+                dbi = new Date(today.getFullYear() + 1, 1, 9);
+            }
+            var daysLeft = Math.ceil((dbi - today) / (1000 * 60 * 60 * 24));
+            countdown.innerHTML = 'Do Dnia Bezpiecznego Internetu zostalo: <strong>' + daysLeft + ' dni</strong>';
+        }
+    </script>
+</body>
+</html>

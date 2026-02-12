@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasoby - dbi.pl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="left-column">
+                    <h1>Dzien Bezpiecznego Internetu</h1>
+                    <nav>
+                        <a href="index.html">Strona Glowna</a>
+                        <a href="about.html">O Dniu</a>
+                        <a href="tips.html">Porady</a>
+                        <a href="resources.html" class="active">Zasoby</a>
+                    </nav>
+                </td>
+                <td class="right-column">
+                    <section class="content-section">
+                        <h2>Przydatne zasoby i narzedzia</h2>
+                        <p class="intro">Oto lista przydatnych stron, aplikacji i narzedzi, ktore pomoga Ci bezpiecznie korzystac z internetu.</p>
+
+                        <div class="resource-category">
+                            <h3>Polskie strony o bezpieczenstwie</h3>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <h4>dyzurnet.pl</h4>
+                                    <p>Narodowe Centrum Bezpieczenstwa Internetu - zglaszanie nielegalnych tresci w internecie</p>
+                                    <a href="https://www.dyzurnet.pl" target="_blank" class="resource-link">Odwiedz strone</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>saferinternet.pl</h4>
+                                    <p>Polskie Centrum Programu Safer Internet - materialy edukacyjne dla dzieci, rodzicow i nauczycieli</p>
+                                    <a href="https://www.saferinternet.pl" target="_blank" class="resource-link">Odwiedz strone</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>niebieskalinia.pl</h4>
+                                    <p>Telefon zaufania dla dzieci i mlodziezy - 800 100 100</p>
+                                    <a href="https://www.116111.pl" target="_blank" class="resource-link">Odwiedz strone</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3>Programy antywirusowe</h3>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <h4>Avast Free Antivirus</h4>
+                                    <p>Darmowy program antywirusowy z podstawowa ochrona</p>
+                                    <a href="https://www.avast.com" target="_blank" class="resource-link">Pobierz</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>Avira Free Security</h4>
+                                    <p>Kompleksowa ochrona za darmo dla uzytkownikow domowych</p>
+                                    <a href="https://www.avira.com" target="_blank" class="resource-link">Pobierz</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>Microsoft Defender</h4>
+                                    <p>Wbudowany w Windows program antywirusowy</p>
+                                    <span class="resource-note">Zainstalowany domyslnie w Windows 10/11</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3>Menedzery hasel</h3>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <h4>Bitwarden</h4>
+                                    <p>Bezpieczny, darmowy menedzer hasel z synchronizacja miedzy urzadzeniami</p>
+                                    <a href="https://bitwarden.com" target="_blank" class="resource-link">Pobierz</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>KeePass</h4>
+                                    <p>Darmowy, open-source menedzer hasel</p>
+                                    <a href="https://keepass.info" target="_blank" class="resource-link">Pobierz</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3>Kontrole rodzicielskie</h3>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <h4>Google Family Link</h4>
+                                    <p>Narzedzie Google do kontroli aktywnosci dzieci na urzadzeniach z Androidem</p>
+                                    <a href="https://families.google.com" target="_blank" class="resource-link">Dowiedz sie wiecej</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>Microsoft Family Safety</h4>
+                                    <p>Kontrole rodzicielskie dla ekosystemu Microsoft</p>
+                                    <a href="https://www.microsoft.com/family" target="_blank" class="resource-link">Dowiedz sie wiecej</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3>Materialy edukacyjne</h3>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <h4>Sieciaki.pl</h4>
+                                    <p>Portal edukacyjny dla dzieci i mlodziezy o bezpieczenstwie w internecie</p>
+                                    <a href="https://www.sieciaki.pl" target="_blank" class="resource-link">Odwiedz strone</a>
+                                </div>
+                                <div class="resource-item">
+                                    <h4>Kidprotect.pl</h4>
+                                    <p>Fundacja Kidprotect.pl - materialy dla rodzicow i nauczycieli</p>
+                                    <a href="https://www.kidprotect.pl" target="_blank" class="resource-link">Odwiedz strone</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Dzien Bezpiecznego Internetu</p>
+        <p>Wykonal: Pawel Proch</p>
+    </footer>
+
+    <script>
+        // Prosta nawigacja - podswietlenie aktywnej strony
+        var linki = document.querySelectorAll('nav a');
+        for (var i = 0; i < linki.length; i++) {
+            if (linki[i].href.indexOf('resources.html') > -1) {
+                linki[i].classList.add('active');
+            }
+        }
+        
+        // Proste przyciski do zmiany wygladu
+        var styleDiv = document.createElement('div');
+        styleDiv.innerHTML = '<p style="margin: 10px 0;">Zmiana wygladu: ' +
+            '<button onclick="document.body.style.backgroundColor=\\"#f0f0f0\\" style="margin: 2px; padding: 5px 10px;">Jasne</button>' +
+            '<button onclick="document.body.style.backgroundColor=\\"#2d2d2d\\" style="margin: 2px; padding: 5px 10px;">Ciemne</button>' +
+            '<button onclick="document.body.style.fontSize=\\"16px\\" style="margin: 2px; padding: 5px 10px;">Normalna</button>' +
+            '<button onclick="document.body.style.fontSize=\\"22px\\" style="margin: 2px; padding: 5px 10px;">Duza</button></p>';
+        styleDiv.style.cssText = 'background: white; padding: 15px; border-radius: 8px; margin: 20px auto; max-width: 600px; text-align: center;';
+        document.querySelector('.content-section').insertBefore(styleDiv, document.querySelector('.intro'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porady - dbi.pl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="left-column">
+                    <h1>Dzien Bezpiecznego Internetu</h1>
+                    <nav>
+                        <a href="index.html">Strona Glowna</a>
+                        <a href="about.html">O Dniu</a>
+                        <a href="tips.html" class="active">Porady</a>
+                        <a href="resources.html">Zasoby</a>
+                    </nav>
+                </td>
+                <td class="right-column">
+                    <section class="content-section">
+                        <h2>Porady dotyczace bezpieczenstwa w internecie</h2>
+                        <p class="intro">Oto najwazniejsze zasady, ktore pomoga Ci bezpiecznie korzystac z sieci!</p>
+
+                        <div class="tip-card">
+                            <h3>1. Silne hasla</h3>
+                            <p>Uzywaj hasel skladajacych sie z co najmniej 12 znakow, w tym duzych i malych liter, cyfr oraz znakow specjalnych. Nie uzywaj tych samych hasel na roznych stronach!</p>
+                            <p class="tip-example">Przyklad dobrego hasla: Kot@rB3z!3czn3#2024</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>2. Uwazaj na phishing</h3>
+                            <p>Nigdy nie klikaj w podejrzane linki w e-mailach, nawet jesli wydaja sie pochodzic od znanych firm. Sprawdzaj adres nadawcy i nie podawaj danych osobowych w niezaufanych miejscach.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>3. HTTPS i bezpieczne polaczenia</h3>
+                            <p>Zawsze sprawdzaj, czy strona uzywa protokolu HTTPS (klodka w pasku adresu). Nie podawaj danych wrazliwych na stronach bez zabezpieczenia.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>4. Aktualizacje oprogramowania</h3>
+                            <p>Regularnie aktualizuj system operacyjny, przegladarke i aplikacje. Aktualizacje zawieraja poprawki bezpieczenstwa, ktore chronia przed nowymi zagrozeniami.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>5. Ochrona prywatnosci</h3>
+                            <p>Nie udostepnij publicznie swoich danych osobowych, adresu, numeru telefonu czy informacji o planach. Ustawiaj prywatnosc profilow w mediach spolecznosciowych.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>6. Antywirus i firewall</h3>
+                            <p>Zainstaluj i regularnie aktualizuj program antywirusowy oraz włącz firewall. Skanuj system regularnie w poszukiwaniu zagrozen.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>7. Ostroznoscia z zdjeciami</h3>
+                            <p>Nie publikuj zdjec, ktore moga ujawnic Twoja lokalizacje lub wrazliwe informacje. Pamietaj, ze raz opublikowane zdjecie moze zostac skopiowane i rozpowszechnione.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>8. Bezpieczenstwo w grach online</h3>
+                            <p>Nie podawaj danych osobowych innym graczom. Uwazaj na oszustow probujacych wyłudzic Twoje dane lub hasla do konta.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>9. Bezpieczne zakupy online</h3>
+                            <p>Kupuj tylko na zaufanych stronach. Sprawdzaj opinie innych klientow i uzywaj bezpiecznych metod platnosci. Nie podawaj danych karty na niezaufanych stronach.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h3>10. Zglaszanie zagrozen</h3>
+                            <p>Jezeli zauwaysz niebezpieczna tresc, zglos ja administratorom strony. W Polsce mozesz zglosic nielegalne tresci przez strone dyzurnet.pl</p>
+                        </div>
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Dzien Bezpiecznego Internetu</p>
+        <p>Wykonal: Pawel Proch</p>
+    </footer>
+
+    <script>
+        // Prosta nawigacja - podswietlenie aktywnej strony
+        var linki = document.querySelectorAll('nav a');
+        for (var i = 0; i < linki.length; i++) {
+            if (linki[i].href.indexOf('tips.html') > -1) {
+                linki[i].classList.add('active');
+            }
+        }
+        
+        // Proste przyciski do zmiany wygladu
+        var styleDiv = document.createElement('div');
+        styleDiv.innerHTML = '<p style="margin: 10px 0;">Zmiana wygladu: ' +
+            '<button onclick="document.body.style.backgroundColor=\\"#f0f0f0\\" style="margin: 2px; padding: 5px 10px;">Jasne</button>' +
+            '<button onclick="document.body.style.backgroundColor=\\"#2d2d2d\\" style="margin: 2px; padding: 5px 10px;">Ciemne</button>' +
+            '<button onclick="document.body.style.fontSize=\\"16px\\" style="margin: 2px; padding: 5px 10px;">Normalna</button>' +
+            '<button onclick="document.body.style.fontSize=\\"22px\\" style="margin: 2px; padding: 5px 10px;">Duza</button></p>';
+        styleDiv.style.cssText = 'background: white; padding: 15px; border-radius: 8px; margin: 20px auto; max-width: 600px; text-align: center;';
+        document.querySelector('.content-section').insertBefore(styleDiv, document.querySelector('.intro'));
+    </script>
+</body>
+</html>
